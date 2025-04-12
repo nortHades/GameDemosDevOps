@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx5k7hudwpjmn"]
+
+[ext_resource type="Texture2D" uid="uid://ds733mlgjrku5" path="res://image/character/ghost.png" id="1_32p3y"]
+[ext_resource type="Script" path="res://scripts/ghost.gd" id="2_euah7"]
+
+[node name="Ghost" type="Sprite2D"]
+modulate = Color(0.487662, 0.487662, 0.487662, 1)
+show_behind_parent = true
+texture = ExtResource("1_32p3y")
+script = ExtResource("2_euah7")

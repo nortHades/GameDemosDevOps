@@ -1,0 +1,184 @@
+[gd_scene load_steps=7 format=3 uid="uid://td3adie4bv7u"]
+
+[ext_resource type="Texture2D" uid="uid://ds733mlgjrku5" path="res://image/character/ghost.png" id="1_c1cno"]
+[ext_resource type="Texture2D" uid="uid://cq1a1as52tmca" path="res://image/soda-can.svg" id="2_ebf04"]
+[ext_resource type="Texture2D" uid="uid://52elvgibe4w7" path="res://image/achievement.svg" id="3_qtgeu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0nf4p"]
+bg_color = Color(0.294118, 0.701961, 1, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_size = 13
+shadow_offset = Vector2(0, 4.29)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lec7f"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2dquj"]
+bg_color = Color(0.6, 0.6, 0.6, 0.00392157)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -192.0
+offset_bottom = -108.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayerInfoBox" type="Panel" parent="."]
+layout_mode = 1
+offset_right = 295.0
+offset_bottom = 139.0
+scale = Vector2(0.76, 0.76)
+theme_override_styles/panel = SubResource("StyleBoxFlat_0nf4p")
+
+[node name="AvatarFrame" type="Panel" parent="PlayerInfoBox"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 13.0
+offset_top = -57.5
+offset_right = 128.0
+offset_bottom = 57.5
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lec7f")
+
+[node name="Avatar" type="TextureRect" parent="PlayerInfoBox/AvatarFrame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.5
+offset_top = -55.5
+offset_right = 55.5
+offset_bottom = 55.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_c1cno")
+expand_mode = 1
+
+[node name="Avatar2" type="TextureRect" parent="PlayerInfoBox/AvatarFrame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 79.5
+offset_top = -56.5
+offset_right = 129.5
+offset_bottom = -6.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ebf04")
+expand_mode = 1
+
+[node name="Avatar3" type="TextureRect" parent="PlayerInfoBox/AvatarFrame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 79.5
+offset_top = 4.5
+offset_right = 129.5
+offset_bottom = 54.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_qtgeu")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="PlayerInfoBox"]
+layout_mode = 0
+offset_left = 202.632
+offset_top = 21.0526
+offset_right = 283.632
+offset_bottom = 60.0526
+theme_override_font_sizes/font_size = 28
+text = "?"
+
+[node name="Label2" type="Label" parent="PlayerInfoBox"]
+layout_mode = 0
+offset_left = 201.316
+offset_top = 76.3158
+offset_right = 282.316
+offset_bottom = 115.316
+theme_override_font_sizes/font_size = 28
+text = "0"
+
+[node name="ColaCanInfo" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -210.0
+offset_bottom = 76.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0nf4p")
+
+[node name="Avatar" type="TextureRect" parent="ColaCanInfo"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -24.0
+offset_right = -41.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ebf04")
+expand_mode = 1
+
+[node name="guide" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -153.0
+offset_right = 282.0
+grow_vertical = 0
+scale = Vector2(0.52, 0.52)
+theme_override_styles/panel = SubResource("StyleBoxFlat_2dquj")
+
+[node name="Label" type="Label" parent="guide"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 16.0
+offset_right = 93.0
+offset_bottom = 117.0
+theme_override_font_sizes/font_size = 28
+text = "W : Up
+A : Left
+S : Down
+D : Right"
+
+[node name="Label2" type="Label" parent="guide"]
+layout_mode = 0
+offset_left = 186.538
+offset_top = 21.1539
+offset_right = 358.538
+offset_bottom = 144.154
+theme_override_font_sizes/font_size = 28
+text = "Shift: ColaBubbleDash
+Space : Jump"
